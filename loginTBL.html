@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html>
+<!-- Hello, my name is Alessandro Cordi and this is a very rudementary LogIn page for the Lightning FanPage website -->
 <head>
 </head>
 <body>
+<!-- Javascript is the main type of code used to create this LogIn system -->
 <script language="javascript">
 	var userName=prompt("Username","")
-
+/* This is a propmt that will ask the user to enter their Username which will become the variable UserName in the "if" statement */  
 	if (userName !== "alessandro") {
 		confirm("Username not valid")
 		}
+/* This if statement checks that the variable entered by the user does not match the one needed, then a message will pop up */
 	else{
+/* If the two values match, the computer will now ask to enter a password */
+/* Just like in the Username code, the value entered will become the variable PassWord */
 		var PassWord = prompt("Password", "");
 		
 		if (PassWord !== "cordi") { 
 			confirm ("Please try again by refreshing")
 			}
+/* Once again, just like the username part, if the two values do not match, a message will pop up telling the user to retry */ 
 		else { 
 			confirm ("Enjoy the website")
 			window.open('Lightning FanPage CA.html')
 			}
 		}
+/* If the two values match, the user will have a window popping up, revealing the rest of the website exclusive to the one's who are members */
 	</script>
 </body>
+<!-- Hope this idea is working for you !. Thank you for reading this ! -->
 </html>
