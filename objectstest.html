@@ -5,24 +5,51 @@
 <head>
 
 <script>
-	var userName = ['Stammer','Aless_Cordi','Hello']
-	var password = ['Stamkos', 'The_Beast']
+/* Below are two seperate groups of Arrays one for the username and one for the password */
+
+var userName = ['Stammer','Aless_Cordi','Hello']
+var password = ['Stamkos', 'The_Sweeper', 'Bye']
+var key = 'false'
+/* This is a propmt that will ask the user to enter their Username. It will then be compared with the set databases */  
+
+var user=prompt("Username", "")
 	
-	var user=prompt("Username", "")
-	var pass= prompt ("Password", "")
-	
-    for (i = 0; i < userName.length; i++) {
-		if (user === userName[i]){
-		var pos = i;
-				if (pass === password[pos]) {
-					confirm("Welcome to the Web page")
-					}
-				}
-			}
-	      
-	else 
-						confirm ("Please try again")
+/* This is a for statement that checks the username. The value i is created and is less than userName.length */
+/* Right below we have a while loop that runs the if part of the code only once. The variable key becomes true after every attempt making the whole code to run once no matter */
+/* We then comapre a newly created variable user which will take the value of what the user has entered */
+for (i = 0; i < userName.length; i++) {
+	while(key == 'false'){
+	    if (user !== userName[i]) {
+			var key = 'true'
+			confirm ("Wrong user. Please try again by refreshing. Enjoy this preview :)")
+			window.open('Lightning FanPage CA non prenuim.html')
+		} 
+		else if (pass !== password[pos]) {
 		
+			var key = 'true'
+			confirm ("Wrong password. Please try again by refreshing. Enjoy this preview :)")
+			window.open('Lightning FanPage CA non prenuim.html')
+		} 
+		else if (user === userName[i]) {
+		
+/* We then check the array values with the username value entered */
+/* If the value is correct we then ask them for the password. Else we should go strait to the first "else if" statement*/
+
+			var pass= prompt ("Password", "")
+/* A new variable pos that takes the same value as i to check the matching password */
+			var pos = i;
+/* Just like the username part, we check the two values (entered and array) */
+			if (pass === password[pos]) {
+				var key = 'true'
+				confirm("Welcome to the Web page")
+				window.open('Lightning FanPage CA.html')
+				}
+		}
+/* When both are correct the user can access the home page if not he will have to refresh */
+/* If not the user will be directed to a guest page */
+		
+	}
+}
 		
 		
 	</script>
